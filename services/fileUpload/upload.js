@@ -10,23 +10,20 @@ const storage = multer.diskStorage({
        isExistFile =  fs.mkdir('/output.js')
     }
 
-
-
-    cb(null, file);
+    cb(null, isExistFile);
   },
+
+  filename: function (req, file, cb) { 
+    cb(null, file.originalname);
+  }
+
 
 });
 
+const upload = multer({storage:storage})
 
-async function fileUpload(req,res){
-   try{
 
-   }catch(error){
-    return res.json({message:"file Upload falied"})
-   }
-}
-
-export {fileUpload}
+export {upload}
 
 
 
