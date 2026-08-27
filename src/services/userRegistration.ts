@@ -1,4 +1,4 @@
-import userRegistration from "./userRegistrationModel.js";
+import { userRegistration, userLogin } from "../models/userModel.js";
 import hash from "bcryptjs";
 import jwt from 'jsonwebtoken';
 

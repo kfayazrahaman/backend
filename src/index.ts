@@ -1,8 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
-import router from "./controller/userController.js";
-import dbConnect from "./db.js";
-import { fileRouter } from "./controller/fileUploadController.js";
+import router from "./controllers/userController.js";
+import dbConnect from "./config/db.js";
+import { fileRouter } from "./controllers/fileUploadController.js";
 
 dotenv.config();
 

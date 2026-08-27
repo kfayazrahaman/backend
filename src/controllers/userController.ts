@@ -3,7 +3,7 @@ import {
   registerUser,
   loginUser,
   logoutUser,
-} from "../services/user/userRegistration.js";
+} from "../services/userRegistration.js";
 import { authenticateToken } from "../middleware/auth.js";
 
 const router = express.Router();

@@ -1,0 +1,61 @@
+Backend Authentication System – Coding Assignment
+Design and implement a secure and scalable authentication system using Node.js, Express.js, TypeScript, Sequelize/Prisma, JWT, and Redis.
+Requirements
+User registration and login with secure password hashing.
+JWT-based authentication and authorization.
+Allow only one active device/session per user.
+Support logout from the current device and login from a new device.
+Use Redis for session, token, and device management.
+Implement file upload using Multer.
+Use a queue system such as BullMQ/RabbitMQ + Redis for background email tasks.
+Implement input validation and centralized error handling.
+Securely manage authentication tokens, sessions, and sensitive data.
+Use Sequelize or Prisma for database operations.
+Follow a clean, scalable, and modular project structure.
+Submission Requirements
+Create a Git repository and push the project to GitHub/GitLab.
+Make meaningful and regular commits.
+Include a README.md containing:
+Include a .env file with the required environment variables.
+
+
+
+how to install typescript in node js
+how to connect postgresql and mysql
+how to use Prisma
+how to use Multer
+how to use Redis
+
+with manual no use ai
+
+
+ Implementation Steps:
+
+   1. Phase 1: Foundation & TypeScript Migration
+       * Install TypeScript and necessary @types packages.
+       * Initialize tsconfig.json.
+       * Refactor project structure (e.g., src/config, src/controllers, src/middleware, src/models, src/routes, src/services, src/utils).
+       * Convert existing .js files to .ts.
+
+   2. Phase 2: Secure Authentication & Redis Integration
+       * Set up Redis connection.
+       * Update auth middleware to check JWT and validate device session via Redis.
+       * Implement secure login/registration logic in services/authService.ts.
+       * Implement "single device login" logic using Redis (store/revoke tokens).
+
+   3. Phase 3: Background Tasks & File Upload
+       * Set up Redis-based queue with BullMQ for email tasks.
+       * Implement email service (e.g., using nodemailer).
+       * Configure multer for file uploads.
+
+   4. Phase 4: Validation, Error Handling & Security
+       * Add input validation (e.g., joi or zod).
+       * Implement centralized error-handling middleware.
+       * Environment variable configuration (.env).
+
+  Verification & Testing:
+   * Test user registration (password hashing).
+   * Test login (JWT generation, device session limit).
+   * Test logout (revoke session in Redis).
+   * Test file upload.
+   * Test email queue processing.
